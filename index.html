@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>日期时间选择器：datetimepicker</title>
+<meta name="keywords" content="datetimepicker, jquery" />
+<meta name="description" content="datetimepicker" />
+
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+<link rel="stylesheet" href="css/main.css">
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery-ui-slide.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript">
+
+ $(document).ready(function (){
+   $(function(){
+      $("input[node-type='datepicker']").datetimepicker({
+         dateFormat: "yy-mm-dd",
+         timeFormat: 'hh:mm:ss',
+         showSecond:true,
+         firstDay:0,
+      beforeShowDay: noWeekendsOrHolidays
+      });
+
+  });
+});
+</script>
+</head>
+
+<body>
+<div id="header">
+   <div id="logo"><h1><a href="javascript:void;" >dateTimepicker</a></h1></div>
+</div>
+<div id="main">
+   <div class="demo">
+      <p><input type="text" id="example_1" node-type='datepicker'/></p>
+   </div>
+   </div>
+
+</body>
+</html>
